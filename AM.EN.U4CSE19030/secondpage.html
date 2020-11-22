@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Myself</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #ffff00; 
+    color: #000000;
+  }
+  
+  .bg-4 { 
+    background-color:  #000000; 
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color:#000000;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="bio.html">Bio</a></li>
+	<li><a href="My work.html">My work</a></li>
+        <li><a href="interest.html">My Interest</a></li>
+        <li><a href="view.html">View</a></li>
+	
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin"><b>Who Am I?</b></h3>
+  <img src="me.jpg" class="img-responsive img-rounded margin" style="display:inline" alt="capture" width="350" height="350">
+  <h3>I am Krishna Rajeev</h3>
+<ul>I am currently persuing my Btech in Computer Science from Amrita School of Engineering</ul>
+<center>
+<script>
+var dt = new Date();
+document.getElementById("date").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear());
+
+
+</script>
+        <div id="old_time"></div> 
+        
+        <button onclick="myFunction()"> 
+          Press me for time
+      </button> 
+        
+        <p id="change"></p> 
+        <script> 
+            // JavaScript function to 
+            // Display 12 hour format 
+            function myFunction() { 
+                var date = new Date(); 
+                var hours = date.getHours(); 
+                var minutes = date.getMinutes(); 
+                
+                // Check whether AM or PM 
+                var newformat = hours >= 12 ? 'PM' : 'AM';  
+                
+                // Find current hour in AM-PM Format 
+                hours = hours % 12;  
+                
+                // To display "0" as "12" 
+                hours = hours ? hours : 12;  
+                minutes = minutes < 10 ? '0' + minutes : minutes; 
+                
+                document.getElementById("change").innerHTML =  
+                  hours + ':' + minutes + ' ' + newformat; 
+            } 
+        </script> 
+</center>
+<div class="info">
+      <label for="example">Write your suggestion:
+      </label>
+      <input id="example" type="text"
+             name="Ntext" size="20">
+      <input id="sent" type="submit"  
+             value="Send"> 
+  </div>
+    <p id="para">      
+    </p>
+  </body>
+  <script>
+    window.onclick = function(e)
+    {   var id =  e.target.id;   
+     if (id === 'sent')  
+     { var txt = document.getElementById('example').value    
+       $( "#para" ).empty().append( txt );
+     }
+    }
+  </script>
+
+
+</div>
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Contact me: krishnarajeev02@gmail.com</p> 
+
+    
+</footer>
+
+</body>
+</html>
